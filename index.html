@@ -27,8 +27,8 @@
         header {
             position: relative;
             width: 100%;
-            height: 420px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('Gemini_Generated_Image_uepwa7uepwa7uepw.jpg') no-repeat center center/cover;
+            height: 380px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -96,6 +96,9 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.6);
             border: 1px solid #1f2229;
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .product-card:hover {
             border-color: var(--accent-color);
@@ -103,26 +106,52 @@
         }
         .product-img-box {
             width: 100%;
-            height: 160px;
-            background: #222;
+            height: 180px;
+            background: #1a1d24;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            font-size: 0.85rem;
-            margin-bottom: 12px;
             overflow: hidden;
+            margin-bottom: 12px;
         }
         .product-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: 0.3s;
+        }
+        .product-card img:hover {
+            transform: scale(1.08);
+        }
+        .product-name {
+            color: var(--white);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
         }
         .price {
             color: var(--accent-color);
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+        }
+        .btn-buy {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-buy:hover {
+            background: var(--accent-color);
+            color: #000;
         }
         .info-section {
             max-width: 700px;
@@ -171,56 +200,92 @@
         <h1>PetalVibe</h1>
         <p class="tagline">Carry Nature, Keep Memories.</p>
         <p class="sub-tagline">Order Yours Today.</p>
-        <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20PetalVibe%20Pendant" class="btn-order">Order Now</a>
+        <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20PetalVibe%20General" class="btn-order">Order Now</a>
     </header>
 
     <h2 class="section-title">تشكيلة القلائد الفنية</h2>
 
     <div class="products-grid">
-        <!-- المنتج 1 -->
+        <!-- 1 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg" alt="قلادة عباد الشمس"></div>
+            <div class="product-name">قلادة عباد الشمس الدائرية</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Sunflower%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 2 -->
+        <!-- 2 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_l77gznl77gznl77g.jpg" alt="قلادة الأقحوان"></div>
+            <div class="product-name">قلادة الأقحوان المربعة</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Daisy%20Square%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 3 -->
+        <!-- 3 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_qwl1wsqwl1wsqwl1.jpg" alt="قلادة اللافندر"></div>
+            <div class="product-name">قلادة اللافندر الملكية</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Lavender%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 4 -->
-        <div class="Product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
-        </div>
-        <!-- المنتج 5 -->
+        <!-- 4 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_r676btr676btr676.jpg" alt="قلادة الوردة الكلاسيكية"></div>
+            <div class="product-name">قلادة الوردة الكلاسيكية</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Rose%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 6 -->
+        <!-- 5 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_vzdngovzdngovzdn.jpg" alt="قلادة الطبيعة البيضاء"></div>
+            <div class="product-name">قلادة الطبيعة البيضاء</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20White%20Daisy%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 7 -->
+        <!-- 6 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_bykxf0bykxf0bykx.jpg" alt="قلادة الزهور البنفسجية"></div>
+            <div class="product-name">قلادة الزهور البنفسجية</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Purple%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 8 -->
+        <!-- 7 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_szirnnszirnnszir.jpg" alt="قلادة أوراق السرخس"></div>
+            <div class="product-name">قلادة أوراق السرخس الأخضر</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Fern%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
-        <!-- المنتج 9 -->
+        <!-- 8 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_uepwa7uepwa7uepw.jpg" alt="قلادة"></div>
-            <div class="price">50.00 درهم</div>
+            <div class="product-img-box"><img src="Gemini_Generated_Image_fhkkb7fhkkb7fhkk.jpg" alt="قلادة الأنبوب الزجاجي"></div>
+            <div class="product-name">قلادة الأنبوب الزجاجي الفني</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Tube%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
+        </div>
+        <!-- 9 -->
+        <div class="product-card">
+            <div class="product-img-box"><img src="Gemini_Generated_Image_leebkqleebkqleeb.jpg" alt="قلادة القلب"></div>
+            <div class="product-name">قلادة القلب الطبيعي</div>
+            <div class="price-row">
+                <span class="price">50.00 درهم</span>
+                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Heart%20Pendant" class="btn-buy">اطلب الآن</a>
+            </div>
         </div>
     </div>
 
