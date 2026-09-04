@@ -3,7 +3,7 @@
 <head>
     <meta name="google-site-verification" content="jq-AM1BhMi-qOeQ" />
     <meta property="og:title" content="PetalVibe | Handcrafted Resin" />
-    <meta property="og:description" content="متجر فني لقطع المجوهرات المصنوعة يدوياً من الراتنج" />
+    <meta property="og:description" content="متجر فني لقطع المجوهرات المصنوعة يدويّاً من الراتنج" />
     <meta property="og:image" content="https://raw.githubusercontent.com/saadsaadwhithe-art/petalvibe/main/Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg" />
     <meta property="og:url" content="https://saadsaadwhithe-art.github.io/petalvibe/" />
     <meta charset="UTF-8">
@@ -117,6 +117,7 @@
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 12px;
+            cursor: pointer;
         }
         .product-card img {
             width: 100%;
@@ -159,6 +160,70 @@
             background: var(--accent-color);
             color: #000;
         }
+        
+        /* تنسيقات النافذة المنبثقة (Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent-color);
+            border-radius: 15px;
+            max-width: 450px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .modal-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .modal-title {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-family: serif;
+        }
+        .modal-desc {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close-btn:hover {
+            color: var(--accent-color);
+        }
+
         .info-section {
             max-width: 700px;
             margin: 50px auto 30px;
@@ -214,7 +279,9 @@
     <div class="products-grid">
         <!-- 1 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg" alt="قلادة عباد الشمس"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg', 'قلادة عباد الشمس الدائرية', 'تحتضن هذه القطعة زهرة عباد الشمس الطبيعية المحفوظة بعناية فائقة داخل الراتنج النقي، لتعكس طاقة الشمس والبهجة في كل لحظة ترتديها فيها.')">
+                <img src="Gemini_Generated_Image_9r2fmp9r2fmp9r2f.jpg" alt="قلادة عباد الشمس">
+            </div>
             <div class="product-name">قلادة عباد الشمس الدائرية</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -223,7 +290,9 @@
         </div>
         <!-- 2 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_l77gznl77gznl77g.jpg" alt="قلادة الأقحوان"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_l77gznl77gznl77g.jpg', 'قلادة الأقحوان المربعة', 'تصميم هندسي مربع يحيط بزهور الأقحوان البيضاء النقية، رمز البساطة والصفاء الطبيعي الخالد.')">
+                <img src="Gemini_Generated_Image_l77gznl77gznl77g.jpg" alt="قلادة الأقحوان">
+            </div>
             <div class="product-name">قلادة الأقحوان المربعة</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -232,7 +301,9 @@
         </div>
         <!-- 3 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_qwl1wsqwl1wsqwl1.jpg" alt="قلادة اللافندر"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_qwl1wsqwl1wsqwl1.jpg', 'قلادة اللافندر الملكية', 'تتميز بعطر وجمال زهور اللافندر البرية البنفسجية، مصممة خصيصاً لمن يحبون الهدوء والأناقة الطبيعية الساحرة.')">
+                <img src="Gemini_Generated_Image_qwl1wsqwl1wsqwl1.jpg" alt="قلادة اللافندر">
+            </div>
             <div class="product-name">قلادة اللافندر الملكية</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -241,7 +312,9 @@
         </div>
         <!-- 4 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_r676btr676btr676.jpg" alt="قلادة الوردة الكلاسيكية"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_r676btr676btr676.jpg', 'قلادة الوردة الكلاسيكية', 'قطعة فنية خالدة تجمع رقة الورود الحمراء والدرجات الدافئة، تجسيد حقيقي للرومانسية والذوق الرفيع.')">
+                <img src="Gemini_Generated_Image_r676btr676btr676.jpg" alt="قلادة الوردة الكلاسيكية">
+            </div>
             <div class="product-name">قلادة الوردة الكلاسيكية</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -250,7 +323,9 @@
         </div>
         <!-- 5 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_daq1medaq1medaq1.jpg" alt="قلادة الطبيعة البيضاء"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_daq1medaq1medaq1.jpg', 'قلادة الطبيعة البيضاء', 'مزيج هادئ من بتلات الزهور البيضاء المتناغمة، تمنحك إحساساً بالنقاء والسلام الداخلي في كل يوم.')">
+                <img src="Gemini_Generated_Image_daq1medaq1medaq1.jpg" alt="قلادة الطبيعة البيضاء">
+            </div>
             <div class="product-name">قلادة الطبيعة البيضاء</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -259,7 +334,9 @@
         </div>
         <!-- 6 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_bykxf0bykxf0bykx.jpg" alt="قلادة الزهور البنفسجية"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_bykxf0bykxf0bykx.jpg', 'قلادة الزهور البنفسجية', 'ألوان بنفسجية عميقة وساحرة تضفي طابعاً ملكياً غامضاً وجذاباً على إطلالتك اليومية.')">
+                <img src="Gemini_Generated_Image_bykxf0bykxf0bykx.jpg" alt="قلادة الزهور البنفسجية">
+            </div>
             <div class="product-name">قلادة الزهور البنفسجية</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -268,7 +345,9 @@
         </div>
         <!-- 7 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_szirnnszirnnszir.jpg" alt="قلادة أوراق السرخس"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_szirnnszirnnszir.jpg', 'قلادة أوراق السرخس الأخضر', 'مستوحاة من أعماق الغابات العذراء، تحافظ على تفاصيل أوراق السرخس الخضراء الدقيقة للأبد.')">
+                <img src="Gemini_Generated_Image_szirnnszirnnszir.jpg" alt="قلادة أوراق السرخس">
+            </div>
             <div class="product-name">قلادة أوراق السرخس الأخضر</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -277,7 +356,9 @@
         </div>
         <!-- 8 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_fhkkb7fhkkb7fhkk.jpg" alt="قلادة الأنبوب الزجاجي"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_fhkkb7fhkkb7fhkk.jpg', 'قلادة الأنبوب الزجاجي الفني', 'تصميم فريد وعصري يأخذ شكل أنبوب شفاف يحفظ تفاصيل النباتات بطريقة فنية ومبتكرة.')">
+                <img src="Gemini_Generated_Image_fhkkb7fhkkb7fhkk.jpg" alt="قلادة الأنبوب الزجاجي">
+            </div>
             <div class="product-name">قلادة الأنبوب الزجاجي الفني</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
@@ -286,12 +367,25 @@
         </div>
         <!-- 9 -->
         <div class="product-card">
-            <div class="product-img-box"><img src="Gemini_Generated_Image_leebkqleebkqleeb.jpg" alt="قلادة القلب"></div>
+            <div class="product-img-box" onclick="openModal('Gemini_Generated_Image_leebkqleebkqleeb.jpg', 'قلادة القلب الطبيعي', 'معلّقة على شكل قلب تنبض بجمال الطبيعة الحية، الهدية المثالية لمن تحب لتعبر عن مشاعرك بصدق.')">
+                <img src="Gemini_Generated_Image_leebkqleebkqleeb.jpg" alt="قلادة القلب">
+            </div>
             <div class="product-name">قلادة القلب الطبيعي</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
                 <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Heart%20Pendant" class="btn-buy">اطلب الآن</a>
             </div>
+        </div>
+    </div>
+
+    <!-- نافذة التفاصيل المنبثقة -->
+    <div id="productModal" class="modal" onclick="closeModalOutside(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modalImg" class="modal-img" src="" alt="صورة القلادة">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <p id="modalDesc" class="modal-desc"></p>
+            <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Pendant" class="btn-order" style="padding: 8px 20px; font-size: 0.9rem;">اطلب هذه القطعة</a>
         </div>
     </div>
 
@@ -312,5 +406,24 @@
         </div>
     </footer>
 
+    <script>
+        function openModal(imgSrc, title, desc) {
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('productModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        function closeModalOutside(event) {
+            var modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
