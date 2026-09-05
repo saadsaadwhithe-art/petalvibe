@@ -81,6 +81,8 @@
             font-size: 1.8rem;
             margin: 40px 0 25px;
             font-family: serif;
+            direction: rtl;
+            unicode-bidi: embed;
         }
         .products-grid {
             display: grid;
@@ -182,7 +184,7 @@
             border-radius: 15px;
             max-width: 450px;
             width: 100%;
-            padding: 20px;
+            padding: 25px 20px 20px 20px;
             text-align: center;
             position: relative;
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
@@ -213,12 +215,13 @@
         }
         .close-btn {
             position: absolute;
-            top: 10px;
-            left: 15px;
+            top: 12px;
+            right: 18px;
             color: var(--white);
             font-size: 1.8rem;
             cursor: pointer;
             transition: 0.2s;
+            line-height: 1;
         }
         .close-btn:hover {
             color: var(--accent-color);
@@ -262,6 +265,29 @@
             margin-top: 15px;
             font-size: 0.85rem;
             color: #888;
+        }
+        .footer-qr {
+            width: 110px;
+            height: 110px;
+            margin: 15px auto 10px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-color);
+            background: #fff;
+            padding: 4px;
+            display: block;
+        }
+        .footer-insta-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .footer-insta-link:hover {
+            text-decoration: underline;
+            color: #fff;
         }
     </style>
 </head>
@@ -373,7 +399,7 @@
             <div class="product-name">قلادة القلب الطبيعي</div>
             <div class="price-row">
                 <span class="price">50.00 درهم</span>
-                <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Heart%20Pendant" class="btn-buy">اطلب الآن</a>
+                <a href="mailto:saadsaadwhithe-art/petalvibe/main/order" class="btn-buy">اطلب الآن</a>
             </div>
         </div>
     </div>
@@ -385,7 +411,7 @@
             <img id="modalImg" class="modal-img" src="" alt="صورة القلادة">
             <h3 id="modalTitle" class="modal-title"></h3>
             <p id="modalDesc" class="modal-desc"></p>
-            <a href="mailto:saadsaadwhithe@gmail.com?subject=Order%20Pendant" class="btn-order" style="padding: 8px 20px; font-size: 0.9rem;">اطلب هذه القطعة</a>
+            <a id="modalBuyBtn" href="#" class="btn-order" style="padding: 8px 20px; font-size: 0.9rem;">اطلب هذه القطعة</a>
         </div>
     </div>
 
@@ -401,6 +427,15 @@
         
         <h3 style="margin-top: 20px;">تواصل معنا</h3>
         <p>Email: saadsaadwhithe@gmail.com</p>
+        
+        <!-- QR Code and Instagram Link Added Here -->
+        <img src="pitalvide_qr.jpg" alt="Instagram QR Code" class="footer-qr">
+        <p>
+            <a href="https://www.instagram.com/pitalvide?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="footer-insta-link">
+                تابعنا على Instagram: @pitalvide
+            </a>
+        </p>
+
         <div class="social-links">
             saadsaadwhith.com | Facebook • Instagram • TikTok
         </div>
@@ -411,6 +446,10 @@
             document.getElementById('modalImg').src = imgSrc;
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDesc').innerText = desc;
+            
+            var encodedTitle = encodeURIComponent(title);
+            document.getElementById('modalBuyBtn').href = "mailto:saadsaadwhithe@gmail.com?subject=Order%20" + encodedTitle;
+            
             document.getElementById('productModal').style.display = 'flex';
         }
 
